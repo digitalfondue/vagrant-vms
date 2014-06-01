@@ -27,7 +27,7 @@ You can use `vagrant up` to boot every VM in the Vagrantfile or just `vagrant up
 
 ###Connect to the PostgreSQL VM
 
-The VM uses the default port (5432), has a superuser `postgres` with password `password` and creates a DB named `testdb`.
+The VM uses PostgreSQL 9.1 (on port 5432), has a superuser `postgres` with password `password` and creates a DB named `testdb`.
 
 This is how a JDBC connection string looks like:
 
@@ -35,7 +35,7 @@ This is how a JDBC connection string looks like:
 
 ###Connect to the MySQL VM
 
-The VM uses the default port (3306), the `root` user doesn't have a password and creates a DB named `testdb`.
+The VM uses MySQL 5.5 (on port 3306), the `root` user doesn't have a password and creates a DB named `testdb`.
 
 This is how a JDBC connection string looks like:
 
