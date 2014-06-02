@@ -5,6 +5,10 @@ Vagrant VMs to test PostgreSQL and MySQL.
 
 Under MIT License.
 
+## Notes
+
+If you are using windows you should ensure that git does not have the autoCRLF enabled (```# git config core.autocrlf``` should return false OR there is a .gitattributes file present that contain "* -text")
+
 ## Installation
 
 * You need to have [Vagrant] installed.
@@ -15,7 +19,7 @@ Under MIT License.
         
 * Initialize the Puppet submodules:
 
-        git submodule update –init
+        git submodule update –-init
         
 * In the Vagrantfile change `'db' => 'testdb'` to a proper name for your DB.
 
