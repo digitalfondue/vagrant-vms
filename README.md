@@ -5,10 +5,6 @@ Vagrant VMs to test PostgreSQL and MySQL.
 
 Under MIT License.
 
-## Notes
-
-If you are using windows you should ensure that git does not have the autoCRLF enabled (```# git config core.autocrlf``` should return false OR there is a .gitattributes file present that contain "* -text")
-
 ## Installation
 
 * You need to have [Vagrant] installed.
@@ -25,11 +21,15 @@ If you are using windows you should ensure that git does not have the autoCRLF e
 
 * Run `vagrant up` from the base directory of this project to initialize the VMs (this may take some time because the first time it has to download the base box image).
 
-##Usage
+## Known bug
+
+Under windows, if the automatic crlf conversion is set to true (most likely), the puppet pgsql submodule is broken. You can manually fix it running `dos2unix validate_postgresql_connection.sh`
+
+## Usage
 
 You can use `vagrant up` to boot every VM in the Vagrantfile or just `vagrant up pgsql` / `vagrant up mysql` if you need a specific database.
 
-###Connect to the PostgreSQL VM
+### Connect to the PostgreSQL VM
 
 The VM uses PostgreSQL 9.1 (on port 5432), has a superuser `postgres` with password `password` and creates a DB named `testdb`.
 
